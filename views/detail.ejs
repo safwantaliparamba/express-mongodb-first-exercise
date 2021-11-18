@@ -12,13 +12,12 @@
       <h3><%= newP.year %></h3>
     </div>
 
-    <a href=""><button>
-        edit
-    </button></a>
-
-    <a href=""><button>
-        delete
-    </button></a>
-    
+    <a href="/product/<%=newP._id%>/edit"><button>edit</button></a>
+    <br><br><br>
+    <form action="/product/<%=newP._id%>/delete?_method=delete" method="post">
+      <button type="submit">delete</button>
+    </form>
+    <br><br><br>
+    <a href="/"><button>ALL MOVIES</button></a>
   </body>
 </html>

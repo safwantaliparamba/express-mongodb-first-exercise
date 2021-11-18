@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDIT MOVIE</title>
+</head>
+<body>
+
+    <h1>EDIT MOVIE </h1>
+
+    <form action="/product/<%=newP._id%>/edit?_method=PATCH" method="POST">
+        <label for="name">name</label>
+        <input type="text" name="name" id="name" value="<%= newP.name  %> " >
+        <br><br>
+        <label for="year">year</label>
+        <input type="number" name="year" id="year"  id="year" value="<%=newP.year%>">
+        <br><br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit">save</button>
+    </form>
+    <a href="/product/<%=newP._id%>"><button>
+        cancel
+    </button></a>
+    
+</body>
+</html>
